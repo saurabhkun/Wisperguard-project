@@ -1,3 +1,22 @@
+import os
+from dotenv import load_dotenv
+from supabase import create_client, Client
+
+# 1. Load environment variables
+load_dotenv()
+
+# 2. Setup Supabase connection
+url = os.getenv("SUPABASE_URL")
+key = os.getenv("SUPABASE_KEY")
+
+# Check if keys are missing (Good for debugging)
+if not url or not key:
+    raise ValueError("Supabase keys not found. Check your .env file or Netlify settings.")
+
+supabase: Client = create_client(url, key)
+
+# ... The rest of your existing code goes here ...
+
 """Minimal CLI entry for WhisperGuard scaffold with end-to-end smoke pipeline.
 
 Wires: AudioCapture -> Ultrasonic detector -> Spectrogram -> CNN placeholder -> Fusion
