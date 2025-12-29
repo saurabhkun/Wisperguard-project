@@ -1,0 +1,21 @@
+numpy
+sounddevice
+soundfile
+librosa
+scipy
+matplotlib
+psutil
+
+# Web demo
+Flask
+
+flask
+librosa
+matplotlib
+numpy
+psutil
+scipy
+sounddevice
+soundfile
+supabase
+python-dotenv
