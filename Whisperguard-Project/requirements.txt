@@ -19,3 +19,5 @@ sounddevice
 soundfile
 supabase
 python-dotenv
+supabase
+python-dotenv
